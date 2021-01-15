@@ -1,5 +1,5 @@
 # COSC-4P02
-Computer Engineering Group Project
+Computer Engineering Group Project - Recipe (Work in Progress)
 
 Scott Dunlop - sd13ev@brocku.ca
 Ethan Gibbons - eg17rp@brocku.ca
@@ -7,7 +7,7 @@ Karina Bissessar- kb18jo@brocku.ca
 David Hasler - dh15pd@brocku.ca
 Wenjie Wang - ww16mo@brocku.ca
 Kwame Manso- km17jr@brocku.ca
-Philip Akkerman- pa13xb@brocku.ca
+Philip Akkerman- pa13xb@brocku.ca - Project Leader
 Sheriff Abouchekeir - sa16op@brocku.ca
 
 Project Summary

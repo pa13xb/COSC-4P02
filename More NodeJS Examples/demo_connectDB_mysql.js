@@ -5,8 +5,8 @@ var mysql = require('mysql');
 
 var con = mysql.createConnection({
   host: "4p02recipeserver.database.windows.net",
-  user: "sa16op", // DB username here
-  password: "6119945SA!^op" // DB password here
+  user: "dh15pd", // DB username here
+  password: "6041321dh!%pd" // DB password here
 });
 
 con.connect(function(err) {

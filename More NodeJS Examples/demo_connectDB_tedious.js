@@ -28,7 +28,7 @@ function queryDatabase() {
   
     // Read all rows from table
     const request = new Request(
-      `SELECT * FROM sheriffTest`,
+      `SELECT * FROM sheriffTest2`,
       (err, rowCount) => {
         if (err) {
           console.error(err.message);

@@ -26,7 +26,7 @@ app.get('/', function (req, res) {
         var request = new sql.Request();
            
         // query to the database and get the records
-        request.query('SELECT * FROM sheriffTest2', function (err, recordset) {
+        request.query('SELECT * FROM user', function (err, recordset) {
             
             if (err) console.log(err)
 

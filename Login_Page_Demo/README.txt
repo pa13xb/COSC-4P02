@@ -1,0 +1,2 @@
+In order to test the form with Node JS handling, simply run the 'demoLoginPage.js' with node and go to the local host address as shown in the console to demo form input and node js processing
+Database handling will be added in very soon

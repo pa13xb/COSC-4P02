@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+var md5 = require('md5')
 
 app.use(express.static('public')); // uses static files from the 'public' folder
 app.get('/demoLoginPage.htm', function (req, res) { // specific get url
@@ -11,7 +12,8 @@ app.get('/process_login', function (req, res) {
    var response = {
       username: req.query.username, // gotten from the form
       password: scramble(req.query.password), // gotten from the form
-      allergens: req.query.allergens // gotten from the form
+      allergens: req.query.allergens, // gotten from the form
+      salt: generateSalt() // To be used in hashing the password
    };
    // Print the query
    console.log(response); // Display the form information
@@ -36,7 +38,7 @@ app.get('/process_login', function (req, res) {
         var request = new sql.Request();
            
         var queryString = `INSERT INTO dbo.[user] 
-        VALUES (2, '${response.username}', '${response.password}', 110)`
+        VALUES (99, '${response.username}', '${response.password}', 110, '${response.salt}')`
         var queryString2 = 'SELECT * FROM [user]'
         request.query(queryString, function (err, recordset) {
             
@@ -66,7 +68,11 @@ var server = app.listen(8081, function () {
    console.log('Go to http://localhost:%s/demoLoginPage.html to test', port)
 })
 
-function scramble(password){
+function scramble(password, salt){
     // A properly complicated scramble (hashing) function needs to implemented
-    return password.toUpperCase()
+    return md5(md5(password) + salt)
+}
+
+function generateSalt(){
+   return 'iAmSalt'
 }

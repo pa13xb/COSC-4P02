@@ -9,7 +9,6 @@ app.get('/demoLoginPage.htm', function (req, res) { // specific get url
 app.get('/process_login', function (req, res) {
    // Prepare output in JSON format
    var response = {
-      userID: 0, // this will be an incremented plus 1 from the last userID in the database
       username: req.query.username, // gotten from the form
       password: scramble(req.query.password), // gotten from the form
       allergens: req.query.allergens // gotten from the form
@@ -17,10 +16,40 @@ app.get('/process_login', function (req, res) {
    // Print the query
    console.log(response); // Display the form information
 
-   /*
-   Database code is currently in a different file
-   It will go here to handle the response from the form
-   */
+   // // Start of SQL
+   var sql = require("mssql");
+
+    // config for your database
+    var config = {
+        user: 'sa16op',
+        password: '6119945SA!^op',
+        server: '4p02recipeserver.database.windows.net', 
+        database: '4p02RecipeDatabase' 
+    };
+
+    // connect to your database
+    sql.connect(config, function (err) {
+    
+        if (err) console.log(err);
+
+        // create Request object
+        var request = new sql.Request();
+           
+        var queryString = `INSERT INTO dbo.[user] 
+        VALUES (2, '${response.username}', '${response.password}', 110)`
+        var queryString2 = 'SELECT * FROM [user]'
+        request.query(queryString, function (err, recordset) {
+            
+            if (err) console.log(err)
+
+            // Print Response that the user was successfully added...
+            // This is flawed as it's a success print if the query went through
+            // NOT if the query succeeded
+            console.log('Successfully added %s to the database', response.username)
+            
+        });
+    });
+    // End of SQL
    
    /**
     * This is the post operation after all the handling

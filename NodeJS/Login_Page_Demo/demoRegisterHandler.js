@@ -3,11 +3,11 @@ var app = express();
 var md5 = require('md5')
 
 app.use(express.static('public')); // uses static files from the 'public' folder
-app.get('/demoLoginPage.htm', function (req, res) { // specific get url
+app.post('/demoLoginPage.htm', function (req, res) { // specific get url
    res.sendFile( __dirname + "/public/" + "form.html" ); // returns this page to the on the get addr
 })
 
-app.get('/process_register', function (req, res) {
+app.post('/process_register', function (req, res) {
    // Prepare output in JSON format (Dictionary)
    var response = {
       username: req.query.username, // gotten from the form

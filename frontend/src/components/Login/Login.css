@@ -1,0 +1,22 @@
+.loginForm{
+
+    background-color: azure;
+    font-size: medium;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-style: groove;
+    width: 20%;
+    display: block;
+    margin: auto;
+    
+    
+}
+.formDiv{
+    align-items:flex-start;
+    flex-direction: column;
+    display: flex;
+    
+}
+.textBox {
+    border-style: ridge;
+    border-radius: 20pt;
+}

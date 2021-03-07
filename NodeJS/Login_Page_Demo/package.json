@@ -1,0 +1,17 @@
+{
+  "name": "Login_Page_Demo",
+  "version": "1.0.0",
+  "description": "In order to test the form with Node JS handling, simply run the 'demoLoginPage.js' with node and go to the local host address as shown in the console to demo form input and node js processing\r Database handling will be added in very soon",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "md5": "^2.3.0",
+    "mssql": "^6.3.1"
+  }
+}

@@ -4,6 +4,7 @@ import { Button } from "../Button"
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import Login from '../Login/Login'
 import './Navbar.css'
+import Form from '../Register/Form';
 
 class Navbar extends React.Component {
     state = { clicked: false }
@@ -35,15 +36,18 @@ class Navbar extends React.Component {
                         })}
 
                     </ul>
+                  
+                    {/* makes Login button appear for Login 
                     <Link to='/Login'>
-                        <Button>Login/Sign Up</Button>
-                    </Link>
+                        <Button>Login</Button>
+                    </Link>*/}
 
 
                 </nav>
                 <div>
                     <Route exact path="/Login" component={Login}></Route>
-                    <Route exact path={MenuItems[0].url} render={() => <div>Home</div>}></Route>
+                    <Route exact path="/SignUp" component={Form}></Route>
+                    <Route exact path={MenuItems[0].url} render={() => <div></div>}></Route>
                 </div>
             </Router>
         )

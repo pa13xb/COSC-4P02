@@ -5,11 +5,7 @@ import ValidateForm from "./ValidateForm";
 
 const UseForm = (callback, ValidateForm) => {
     const[values, setValues] = useState({
-    username: '',
-    email: '',
-    password: '',
-    confirmpw: ''
-    })
+    username: '', email: '', password: '', confirmpw: ''})
 
     const[errors, setErrors] = useState({})
 

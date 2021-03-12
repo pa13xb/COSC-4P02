@@ -54,9 +54,9 @@
   
   .form-success {
     text-align: center;
-    font-size: 24px;
-    margin-top: 80px;
-    color: #fff;
+    font-size: 28px;
+    margin-top: 70px;
+    color: rgb(253, 119, 9);
   }
   
   .form-content-right {
@@ -79,11 +79,12 @@
   }
   
   .form h1 {
-    font-size: 1rem;
+    font-size: 1.5rem;
     text-align: start;
     width: 80%;
     margin-bottom: 1rem;
     color: #fff;
+    font-family:'Verdana, Geneva, Tahoma, sans-serif';
   }
   
   .form-inputs {
@@ -93,7 +94,7 @@
   
   .form-label {
     display: inline-block;
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     margin-bottom: 6px;
     color: #fff;
   }
@@ -113,23 +114,20 @@
     font-size: 12px;
   }
   
-  .form-input-btn {
+  .sign-up-btn {
     width: 80%;
     height: 50px;
     margin-top: 10px;
     border-radius: 2px;
-    background: linear-gradient(
-      90deg,
-      rgb(39, 176, 255) 0%,
-      rgb(0, 232, 236) 100%
-    );
+    background-color: rgb(39, 176, 255);
     outline: none;
     border: none;
     color: #fff;
-    font-size: 1rem;
+    font-size: 1.5rem;
+    margin-left: 12px;
   }
   
-  .form-input-btn:hover {
+  .sign-up-btn:hover {
     cursor: pointer;
     background: linear-gradient(
       90deg,

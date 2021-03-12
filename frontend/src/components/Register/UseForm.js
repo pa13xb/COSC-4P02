@@ -1,12 +1,14 @@
 import {useState, useEffect} from 'react'
 import ValidateForm from "./ValidateForm";
 
+/* This function allows users to enter information into the text field on sign up form */
+
 const UseForm = (callback, ValidateForm) => {
     const[values, setValues] = useState({
     username: '',
     email: '',
     password: '',
-    password2: ''
+    confirmpw: ''
     })
 
     const[errors, setErrors] = useState({})
@@ -33,11 +35,11 @@ const UseForm = (callback, ValidateForm) => {
         if(Object.keys(errors).length === 0 && isSubmitting){
             callback();
             }
-        }, 
-        [errors]
-        );
+        }, [errors]);
     
 
     return {handleChange, values, handleSubmit, errors}
 }
+
+
 export default UseForm

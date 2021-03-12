@@ -1,5 +1,6 @@
 /* This function checks that input into sign up is valid input */
-export default function ValidateForm(values){
+
+function ValidateForm(values){
     let errors = {}
 
     if(!values.username.trim()){
@@ -14,15 +15,17 @@ export default function ValidateForm(values){
 
     if(!values.password){
         errors.password = "Password required"
-    } else if (values.password.length < 5){
-        errors.password = "Password should be 5 character or more"
+    } else if (values.password.length < 4){
+        errors.password = "Password should be 4 characters or more"
     }
 
-    if(!values.password2){
-        errors.password2 = "Password required"
+    if(!values.confirmpw){
+        errors.confirmpw = "Password required"
     } 
-    else if(values.password2 !== values.password){
-        errors.password2 = "Passwords do not match"
+    else if(values.confirmpw !== values.password){
+        errors.confirmpw = "Passwords do not match"
     }
     return errors
 }
+
+export default ValidateForm;
